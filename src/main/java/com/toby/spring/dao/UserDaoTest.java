@@ -1,14 +1,13 @@
-package com.toby.spring;
+package com.toby.spring.dao;
 
-import com.toby.spring.dao.UserDao;
 import com.toby.spring.domain.User;
 
 import java.sql.SQLException;
 
-public class Main {
+public class UserDaoTest {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        UserDao dao = new UserDao();
+        UserDao dao = new DaoFactory().userDao();
 
         User user = new User();
         user.setId("whiteship");
